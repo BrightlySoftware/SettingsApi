@@ -22,4 +22,4 @@ timestamp: false
 silent: false
 path: []
 blueprint: apiary.apib
-endpoint: 'http://vnext.api.localtest.me/'
+endpoint: 'http://vnext.settings.localtest.me/'
