@@ -9,7 +9,7 @@
     <copyright>Copyright © 2015 Dude Solutions, Inc. - All Rights Reserved</copyright>
      <projectUrl>https://github.com/DudeSolutions/DudeSettingsApi</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Auto Generated Unified API SDK</description>
+    <description>Auto Generated Settings API SDK</description>
     <language>en-US</language>
     <tags>sdk unified api</tags>
     <dependencies>
@@ -25,6 +25,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="code\DudeUnifiedApi.PCL\bin\$configuration$\DudeUnifiedApi.PCL.dll" target="lib\net45" />
+    <file src="code\DudeUnifiedApi.PCL\bin\$configuration$\DudeSettingsApi.PCL.dll" target="lib\net45" />
   </files>
 </package>
