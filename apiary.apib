@@ -125,6 +125,54 @@ Any response that does not provide a ```200 OK``` response code should be treate
 
 + Response 204
 
+# Group User Settings
+
+## User Setting Collection [/users/{userId}/settings{?page,pagesize,prefix}]
+
++ Parameters
+    + userId: 1 (required, number) - {INT} ID of the user in the form of an integer
+    + page: 1 (number, optional) - {INT} The page to request from the collection.
+    + pagesize: 1000 (number, optional) - {INT} The number of records to load in a page from the collection.
+    + prefix: PRODUCT-SOMESETTING (string, optional) - Prefix of the Key for the setting
+
+### GET
+
++ Response 200 (application/json)
+    + Attributes (Base Collection Response)
+        + `data` (array[User Setting], required)
+
+## User Setting Create [/users/{userId}/settings]
+
+### POST
+
++ Request
+    + Attributes (User Setting)
+
++ Response 201 (application/json)
+    + Attributes (User Setting)
+
+## User Setting Detail [/users/{userId}/settings/{key}]
+
++ Parameters
+    + userId: 1 (required, number) - {INT} ID of the user in the form of an integer
+    + key: PRODUCT-SOMESETTING (required, string) - Key for the setting
+
+### GET
+
++ Response 200 (application/json)
+    + Attributes (User Setting)
+
+### PUT
+
++ Request (application/json)
+    + Attributes (User Setting)
+
++ Response 200 (application/json)
+    + Attributes (User Setting)
+
+### DELETE
+
++ Response 204
 
 # Data Structures
 
@@ -152,6 +200,13 @@ Any response that does not provide a ```200 OK``` response code should be treate
 
 ## Account Setting (object)
 Represents a key-value pair for account level setting
+
+### Properties
++ `key`: PRODUCT-SOMESETTING (string, required) - The key to identify the setting
++ `value`: (object) - Dynamic object for the setting value
+
+## User Setting (object)
+Represents a key-value pair for user level setting
 
 ### Properties
 + `key`: PRODUCT-SOMESETTING (string, required) - The key to identify the setting
